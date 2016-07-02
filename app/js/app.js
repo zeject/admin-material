@@ -2,7 +2,11 @@
 /**
  * You must include the dependency on 'ngMaterial'
  */
-var app = angular.module('app', [ 'ngMaterial', 'ngMessages', 'md.data.table', 'ui.router' ]);
+var app = angular.module('app', [ 'ngMaterial', 'ngAnimate', 'ngAria', 'ngMessages', 'md.data.table', 'mdPickers', 'ui.router' ]);
+
+app.config(function() {
+
+});
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	// $urlRouterProvider.when('', '/index/admin/center');
@@ -31,6 +35,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.controller('ctrl.center', function($scope, $timeout, $mdDialog, $mdEditDialog) {
+	
+	$scope.myDate = new Date();
+
 	var imagePath = 'app/img/demo.jpg';
 	$scope.todos = [ {
 		face : imagePath,

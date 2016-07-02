@@ -6,6 +6,24 @@
     </form>
     <md-button class="md-icon-button" aria-label="Settings" ><md-icon md-svg-src="app/img/ic_clear_white_24px.svg"></md-icon></md-button>
   </div>
+  <div class="md-toolbar-tools" layout="row" layout-align="end center">
+    <mdp-date-picker mdp-open-on-click required name="dateFormat" mdp-format="DD/MM/YYYY" ng-model="currentDate">
+                <div ng-messages="demoForm.dateFormat.$error">
+                  <div ng-message="required">This is required</div>
+                  <div ng-message="format">Invalid format</div>
+                </div>
+              </mdp-date-picker>
+    <mdp-time-picker ng-model="currentDate"></mdp-time-picker>
+    <md-checkbox ng-model="isChecked" aria-label="Finished?">
+      Finished ?
+    </md-checkbox>
+    <md-checkbox md-no-ink ng-model="hasInk" aria-label="No Ink Effects">
+      No Ink Effects
+    </md-checkbox>
+    <md-checkbox ng-disabled="true" ng-model="isDisabled" aria-label="Disabled">
+      Disabled
+    </md-checkbox>
+  </div>
 </md-toolbar>
 <!-- exact table from live demo -->
 <md-table-container>
