@@ -1,6 +1,7 @@
 {
   "name": "admin-material",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "",
   "scripts": {
     "start": "npm run lite",
     "lite": "lite-server"
@@ -13,10 +14,25 @@
     "angular-material": "^1.1.0-rc.5",
     "angular-material-data-table": "^0.10.9",
     "angular-messages": "^1.5.7",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "mdPickers": "^0.7.2",
+    "moment": "^2.13.0"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0"
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeject/admin-material.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/zeject/admin-material/issues"
+  },
+  "homepage": "https://github.com/zeject/admin-material#readme"
 }
