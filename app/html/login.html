@@ -1,0 +1,29 @@
+<div flex layout="row" layout-align="center center" style="background:#eee;">
+	<md-card>
+		<md-content layout-padding layout-wrap>
+		    <form name="projectForm" style="min-width:360px;">
+	          <md-input-container class="md-block">
+	            <label>用户名</label>
+	            <input required md-no-asterisk name="description" ng-model="project.username">
+	            <div ng-messages="projectForm.description.$error">
+	              <div ng-message="required">This is required.</div>
+	            </div>
+	          </md-input-container>
+	          <md-input-container class="md-block">
+	            <label>密码</label>
+	            <input required md-no-asterisk name="password" ng-model="project.password">
+	            <div ng-messages="projectForm.password.$error">
+	              <div ng-message="required">This is required.</div>
+	            </div>
+	          </md-input-container>
+	          <md-card-actions layout="row" layout-align="space-between center">
+	          	  <a class="md-subheader">忘记密码?</a>
+	              <button ui-sref="index.admin.center" class="md-fab md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Eat cake">
+	                  <md-icon md-svg-src="app/img/ic_arrow_forward_white_24px.svg"></md-icon>
+	              	  <div class="md-ripple-container"></div>
+	              </button>
+              </md-card-actions>
+	        </form>
+		</md-content>
+	</md-card>
+</div>
