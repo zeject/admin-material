@@ -2,26 +2,38 @@
 	<md-card>
 		<md-content layout-padding layout-wrap>
 		    <form name="projectForm" style="min-width:360px;">
-	          <md-input-container class="md-block">
+	          <md-input-container class="md-icon-float md-block">
 	            <label>用户名</label>
+	            <md-icon md-svg-src="app/img/angular-logo.svg" class="name"></md-icon>
 	            <input required md-no-asterisk name="description" ng-model="project.username">
 	            <div ng-messages="projectForm.description.$error">
 	              <div ng-message="required">This is required.</div>
 	            </div>
 	          </md-input-container>
-	          <md-input-container class="md-block">
+	          <md-input-container ng-if="false" class="md-icon-float md-icon-right md-block" layout="row" layout-align="space-between">
 	            <label>密码</label>
-	            <input required md-no-asterisk name="password" ng-model="project.password">
+	            <md-icon md-svg-src="app/img/angular-logo.svg" class="name"></md-icon>
+	            <input required md-no-asterisk name="password" type="password" ng-model="project.password">
+	            <md-icon md-svg-src="app/img/ic_arrow_forward_white_24px.svg"></md-icon>
 	            <div ng-messages="projectForm.password.$error">
 	              <div ng-message="required">This is required.</div>
 	            </div>
 	          </md-input-container>
-	          <md-card-actions layout="row" layout-align="space-between center">
+              <div layout="row" layout-align="space-between center">
+              	<md-input-container class="md-icon-float" flex>
+		          <label>密码</label>
+		          <md-icon md-svg-src="app/img/angular-logo.svg" class="name"></md-icon>
+		          <input required md-no-asterisk name="password" type="password" ng-model="project.password">
+		          <div ng-messages="projectForm.password.$error">
+		            <div ng-message="required">This is required.</div>
+		          </div>
+		       </md-input-container>
+                <md-button ui-sref="index.admin.center" class="md-fab" aria-label="Photos with Tooltip Delay" style="margin-top: -24px;">
+                  <md-icon md-svg-src="app/img/ic_arrow_forward_white_24px.svg"></md-icon>
+                </md-button>
+              </div>
+	          <md-card-actions ng-if="true" layout="row" layout-align="center center">
 	          	  <a class="md-subheader">忘记密码?</a>
-	              <button ui-sref="index.admin.center" class="md-fab md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Eat cake">
-	                  <md-icon md-svg-src="app/img/ic_arrow_forward_white_24px.svg"></md-icon>
-	              	  <div class="md-ripple-container"></div>
-	              </button>
               </md-card-actions>
 	        </form>
 		</md-content>

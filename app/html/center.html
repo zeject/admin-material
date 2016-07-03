@@ -1,4 +1,4 @@
-<md-toolbar class="md-table-toolbar md-default" aria-hidden="false" style="">
+<md-toolbar class="md-table-toolbar md-default md-menu-toolbar" aria-hidden="false" style="">
   <div class="md-toolbar-tools">
     <md-icon md-svg-src="app/img/ic_search_white_24px.svg"></md-icon>
     <form flex="" name="filter.form" class="ng-valid flex ng-pristine" style="">
@@ -7,13 +7,21 @@
     <md-button class="md-icon-button" aria-label="Settings" ><md-icon md-svg-src="app/img/ic_clear_white_24px.svg"></md-icon></md-button>
   </div>
   <div class="md-toolbar-tools" layout="row" layout-align="end center">
-    <mdp-date-picker mdp-open-on-click required name="dateFormat" mdp-format="DD/MM/YYYY" ng-model="currentDate">
-                <div ng-messages="demoForm.dateFormat.$error">
-                  <div ng-message="required">This is required</div>
-                  <div ng-message="format">Invalid format</div>
-                </div>
-              </mdp-date-picker>
-    <mdp-time-picker ng-model="currentDate"></mdp-time-picker>
+
+    <sm-date-time-picker
+         close-on-select="true"
+         fname="日期fname"
+         lable="日期lable"
+         form="" 
+         value="vm.employee.joiningDate" 
+         start-date="10-15-2015"
+         mode="date"
+         min-date="2015-01-12"
+         max-date="2016-12-12"
+         is-required="true" 
+         format="YYYY-MM-DD" 
+         week-start-day="Sunday">
+    </sm-date-time-picker>
     <md-checkbox ng-model="isChecked" aria-label="Finished?">
       Finished ?
     </md-checkbox>
