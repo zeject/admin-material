@@ -4,16 +4,15 @@
 	<h1 class="md-toolbar-tools">Sidenav Left</h1>
 	</md-toolbar> 
 	<md-content layout-padding> 
-
 		<md-list class="md-dense" flex> 
 			<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>
-			<md-list-item ng-click="null" class="noright">
+			<md-list-item ui-sref="index.admin.center" class="noright">
 			    <img alt="Min Li Chan" ng-src="app/img/demo.jpg" class="md-avatar" />
-			    <p>Min Li Chan</p>
+			    <p>已购买列表</p>
 			</md-list-item>
-			<md-list-item ng-click="null" class="noright">
+			<md-list-item ui-sref="login" ng-click="null" class="noright">
 			    <img alt="Min Li Chan" ng-src="app/img/demo.jpg" class="md-avatar" />
-			    <p>Min Li Chan</p>
+			    <p> Login </p>
 			</md-list-item>
 			<md-list-item ng-click="null" class="noright">
 			    <img alt="Min Li Chan" ng-src="app/img/demo.jpg" class="md-avatar" />
@@ -54,7 +53,9 @@
 	</md-toolbar>
 	<md-content layout-padding>
 		<md-card md-whiteframe="4">
-			<ui-view></ui-view>
+			<md-card-content>
+				<ui-view></ui-view>
+			</md-card-content>
 		</md-card>
 	</md-content>
 </div>
